@@ -11,7 +11,7 @@
 #import <AddressBook/AddressBook.h>
 
 #import "FictionViewController.h"
-
+#import "MasonryViewController.h"
 @interface HomeViewController ()
 
 @property (nonatomic, strong) UIImageView *imageView;
@@ -36,7 +36,7 @@
     self.tableView.rowHeight = 50.0f;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     
-    self.titleArray = @[@"小说"];
+    self.titleArray = @[@"小说",@"Masonry"];
     
 }
 
@@ -58,7 +58,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *title = self.titleArray[indexPath.row];
-    [self goToVC:FictionViewController.class];
+    if ([title isEqualToString:@"小说"]) {
+        [self goToVC:FictionViewController.class];
+    }else if ([title isEqualToString:@"Masonry"]) {
+        [self goToVC:MasonryViewController.class];
+    }
 }
 
 

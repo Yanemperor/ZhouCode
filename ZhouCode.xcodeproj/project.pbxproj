@@ -44,6 +44,8 @@
 		358594801F0A33DF006E59A4 /* DBOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3585947F1F0A33DF006E59A4 /* DBOperation.mm */; };
 		35A252781F1C4A00007DB7F3 /* MeOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A252771F1C4A00007DB7F3 /* MeOneViewController.m */; };
 		35BC0F631F66845F00B0E7CC /* Me2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC0F621F66845F00B0E7CC /* Me2ViewController.m */; };
+		35D6C81D219579D800AE4D45 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D6C81C219579D800AE4D45 /* MasonryViewController.m */; };
+		35D6C82121957AEF00AE4D45 /* MasonryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D6C82021957AEF00AE4D45 /* MasonryCell.m */; };
 		35EFE6F11F05F2CE004EA9D6 /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE6E31F05F2CE004EA9D6 /* BaseCollectionViewController.m */; };
 		35EFE6F21F05F2CE004EA9D6 /* BaseHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE6E51F05F2CE004EA9D6 /* BaseHUDViewController.m */; };
 		35EFE6F31F05F2CE004EA9D6 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE6E71F05F2CE004EA9D6 /* BaseNavigationViewController.m */; };
@@ -156,6 +158,10 @@
 		35A252771F1C4A00007DB7F3 /* MeOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeOneViewController.m; sourceTree = "<group>"; };
 		35BC0F611F66845F00B0E7CC /* Me2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Me2ViewController.h; sourceTree = "<group>"; };
 		35BC0F621F66845F00B0E7CC /* Me2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Me2ViewController.m; sourceTree = "<group>"; };
+		35D6C81B219579D800AE4D45 /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		35D6C81C219579D800AE4D45 /* MasonryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		35D6C81F21957AEF00AE4D45 /* MasonryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryCell.h; sourceTree = "<group>"; };
+		35D6C82021957AEF00AE4D45 /* MasonryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryCell.m; sourceTree = "<group>"; };
 		35EFE6DA1F05DCEA004EA9D6 /* EnumType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumType.h; sourceTree = "<group>"; };
 		35EFE6DC1F05DE49004EA9D6 /* FontMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontMacro.h; sourceTree = "<group>"; };
 		35EFE6E21F05F2CE004EA9D6 /* BaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewController.h; sourceTree = "<group>"; };
@@ -275,6 +281,7 @@
 		35575F2C1F0CDAD5007E00F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				35D6C81A219579A100AE4D45 /* Masonry */,
 				35575F301F0CDAEC007E00F7 /* HomeViewController.h */,
 				35575F311F0CDAEC007E00F7 /* HomeViewController.m */,
 				351A9CAF2186B3DD00294668 /* Fiction */,
@@ -525,6 +532,25 @@
 				35EFE6E01F05F2CE004EA9D6 /* Base */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		35D6C81A219579A100AE4D45 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				35D6C81E219579FB00AE4D45 /* View */,
+				35D6C81B219579D800AE4D45 /* MasonryViewController.h */,
+				35D6C81C219579D800AE4D45 /* MasonryViewController.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		35D6C81E219579FB00AE4D45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35D6C81F21957AEF00AE4D45 /* MasonryCell.h */,
+				35D6C82021957AEF00AE4D45 /* MasonryCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		35EFE6E01F05F2CE004EA9D6 /* Base */ = {
@@ -861,6 +887,8 @@
 				35575F3A1F0CDCF0007E00F7 /* MeViewController.m in Sources */,
 				357995B11F67E134004DF1CC /* MeModel.m in Sources */,
 				350B28381F78A93700A52D06 /* Me4ViewController.m in Sources */,
+				35D6C82121957AEF00AE4D45 /* MasonryCell.m in Sources */,
+				35D6C81D219579D800AE4D45 /* MasonryViewController.m in Sources */,
 				351A9CB52186B65800294668 /* AddFictionViewController.m in Sources */,
 				3585947D1F0A17CE006E59A4 /* BaseViewModel.m in Sources */,
 				357B70251F6F5F5700137011 /* ShowViewModel.m in Sources */,
