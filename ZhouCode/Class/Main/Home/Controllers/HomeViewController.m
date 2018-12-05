@@ -36,7 +36,7 @@
     self.tableView.rowHeight = 50.0f;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     
-    self.titleArray = @[@"小说",@"Masonry"];
+    self.titleArray = @[@"小说",@"Masonry",@"切换网络环境"];
     
 }
 
@@ -62,6 +62,9 @@
         [self goToVC:FictionViewController.class];
     }else if ([title isEqualToString:@"Masonry"]) {
         [self goToVC:MasonryViewController.class];
+    }else if ([title isEqualToString:@"切换网络环境"]) {
+        NSArray *array = @[@10,@2,@3,@1,@8,@4,@5,@6,@7,@9];
+        [self bubbleDescendingOrderSortWithArray:[NSMutableArray arrayWithArray:array]];
     }
 }
 
@@ -76,7 +79,20 @@
 
 
 #pragma mark - private methods(内部接口)
-
+- (void)bubbleDescendingOrderSortWithArray:(NSMutableArray *)descendingArr
+{
+    for (int i = 0; i < descendingArr.count; i++) {
+        for (int j = 0; j < descendingArr.count - 1 - i; j++) {
+            if ([descendingArr[j] intValue] < [descendingArr[j + 1] intValue]) {
+                NSLog(@"%@    %@",descendingArr[j],descendingArr[j + 1]);
+                int tmp = [descendingArr[j] intValue];
+                descendingArr[j] = descendingArr[j + 1];
+                descendingArr[j + 1] = [NSNumber numberWithInt:tmp];
+            }
+        }
+    }
+    NSLog(@"冒泡降序排序后结果：%@", descendingArr);
+}
 
 #pragma mark -  loading
 

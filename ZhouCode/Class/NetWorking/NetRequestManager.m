@@ -24,7 +24,7 @@
     static NetRequestManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[self alloc] initWithBaseURL:[NSURL URLWithString:BaseURL]];
+        manager = [[self alloc] initWithBaseURL:[NSURL URLWithString:@""]];
     });
     return manager;
 }
@@ -72,7 +72,7 @@
  */
 + (void)requestWithType:(HttpRequestType)type withUrlString:(NSString *)urlString withParaments:(NSDictionary *)paraments withSuccessBlock:(requestSuccess)successBlock withFailureBlock:(requestFailure)failureBlock {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSLog(@"URL:%@%@\n%@",BaseURL,urlString,paraments);
+    NSLog(@"URL:%@%@\n%@",@"",urlString,paraments);
     switch (type) {
         case GET:{
             [[NetRequestManager shareManager] GET:urlString parameters:paraments progress:^(NSProgress * _Nonnull downloadProgress) {

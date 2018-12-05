@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BaseTabBarController.h"
+#import "ApiConfigsUtil.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [ApiConfigsUtil shareApiConfigsUtil].apiConfig;
     BaseTabBarController *baseTabBar = [[BaseTabBarController alloc] init];
     self.window.rootViewController = baseTabBar;
     return YES;
